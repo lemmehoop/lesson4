@@ -2,6 +2,8 @@
 
 {% block body %}
     <h1>{{ title }}</h1>
+    {#  условие должно обязательно закрываться конструкцией {% endif %} #}
+    {#  цикл так же должен закрываться конструкцией {% endfor %} #}
     {% if country %}
         {% for film in films %}
             {% if country == film.country %}
