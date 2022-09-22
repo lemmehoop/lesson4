@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    {% if country %}
+        {% for film in films %}
+            {% if country == film.country %}
+                <div onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+                    <p>{{ film.name }}</p>
+                    <p>{{ film.rating }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% for film in films %}
+            <div onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+                <p>{{ film.name }}</p>
+                <p>{{ film.rating }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
