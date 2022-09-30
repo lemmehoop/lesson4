@@ -52,5 +52,41 @@
     "name": "French Film 3",
     "rating": 8.7,
     "country": "France"
+  },
+  {
+    "id": 10,
+    "name": "New American Film",
+    "rating": 8.8,
+    "country": "USA"
+  },
+  {
+    "id": 11,
+    "name": "Snatch",
+    "rating": 8.5,
+    "country": "England"
+  },
+  {
+    "id": 12,
+    "name": "Thor: Love and Thunder",
+    "rating": 6.1,
+    "country": "USA"
+  },
+  {
+    "id": 16,
+    "name": "Batman: begins",
+    "rating": 8.2,
+    "country": "USA"
+  },
+  {
+    "id": 17,
+    "name": "Batman 2022",
+    "rating": 7.9,
+    "country": "USA"
+  },
+  {
+    "id": 18,
+    "name": "bkjrtbn",
+    "rating": 7.0,
+    "country": "Russia"
   }
 ]

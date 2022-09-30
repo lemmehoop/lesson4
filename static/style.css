@@ -1,0 +1,112 @@
+html {
+    height: 98%;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background: #e3f2fd;
+    text-align: center;
+}
+
+div {
+    background-color: #263238;
+    width: 185px;
+    padding: 2px;
+    color: #e3f2fd;
+    border-radius: 3px;
+    text-align: center;
+    margin: 9px;
+}
+
+.film {
+    width: 250px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.content {
+    width: 100%;
+    background: none;
+    height: auto;
+    margin: 0;
+}
+
+h1 {
+    color: #263238;
+}
+
+.all_films {
+    display: inline;
+    float: left;
+    height: 100px;
+}
+
+.all_films:hover {
+    outline: 2px solid #415660;
+}
+
+hr {
+    border: 1px solid #e3f2fd;
+    border-radius: 1px;
+    background: #e3f2fd;
+}
+
+.content hr {
+    border: 0.4px solid #e3f2fd;
+}
+
+.form-block {
+    display: inline-block;
+    height: 215px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+label {
+    text-align: left;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.form-block input {
+    margin-bottom: 10px;
+    background: #102027;
+    border: 1px solid #102027;
+    border-radius: 2px;
+    line-height: 20px;
+    color: white;
+    width: 270px;
+}
+
+button {
+    background: #e3f2fd;
+    color: #102027;
+    border: 2px solid #e3f2fd;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+button:hover {
+    outline: 2px solid #415660;
+}
+
+#new {
+    font-size: 32px;
+}
+
+.back {
+    padding: 0;
+    width: 90px;
+    height: 14px;
+}
+
+.back p {
+    font-size: 12px;
+}
+
+.back:hover {
+    outline: 2px solid #415660;
+}

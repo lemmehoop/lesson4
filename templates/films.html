@@ -1,24 +1,32 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h1>{{ title }}</h1>
+    <h1>{{ title }}</h1><br>
     {#  условие должно обязательно закрываться конструкцией {% endif %} #}
     {#  цикл так же должен закрываться конструкцией {% endfor %} #}
-    {% if country %}
-        {% for film in films %}
-            {% if country == film.country %}
-                <div onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+    <div class="content">
+        {% if country %}
+            {% for film in films %}
+                {% if country.upper() == film.country.upper() %}
+                    {# функция для добавления функции перехлда на новую страницу #}
+                    <div class="all_films" onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+                        <p>{{ film.name }}</p>
+                        <hr>
+                        <p>{{ film.rating }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for film in films %}
+                <div class="all_films" onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
                     <p>{{ film.name }}</p>
+                    <hr>
                     <p>{{ film.rating }}</p>
                 </div>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        {% for film in films %}
-            <div onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
-                <p>{{ film.name }}</p>
-                <p>{{ film.rating }}</p>
-            </div>
-        {% endfor %}
-    {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="all_films" onclick="location.href = '{{ url_for("render_form") }}'">
+            <p id="new">+</p>
+        </div>
+    </div>
 {% endblock %}

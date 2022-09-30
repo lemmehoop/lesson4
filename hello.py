@@ -21,18 +21,67 @@ def films_list():
     with open("films.json", 'r') as f:
         films = json.load(f)
 
-    # получаем GET-параметр country (Russia/USA/French
+    # получаем GET-параметр country (Russia/USA/French)
     country = request.args.get("country")
+    rating = request.args.get('rating')
+    # фильтрация фильмов по рейтингу, полученному из get запроса
+    if rating:
+        films = list(filter(lambda x: x['rating'] >= float(rating), films))
 
     # формируем контекст, который мы будем передавать для генерации шаблона
     context = {
         'films': films,
         'title': "FILMS",
-        'country': country
+        'country': country,
+        'rating': rating
     }
 
     # возвращаем сгенерированный шаблон с нужным нам контекстом
     return render_template("films.html", **context)
+
+
+# адрес, по которому можно отправлять и get, и post запросы
+@app.route('/film_form', methods=['GET', 'POST'])
+def render_form():
+    # если get запрос - просто рендерим страницу с формой
+    if request.method == 'GET':
+        return render_template('film_form.html')
+
+    # если post запрос - получаем данные из инпутов
+    name = request.form.get('name')
+    rating = request.form.get('rating')
+    country = request.form.get('country')
+
+    # получаем данные из json
+    with open('films.json') as f:
+        films = json.load(f)
+
+    # если одно из полей пустое - страницыа с ошибкой
+    if not (name and rating and country):
+        return render_template("error.html", error="Одно из полей пустое!", page='film_form')
+
+    # словарь с новым фильмом
+    new = {
+        'id': films[-1]['id'] + 1,
+        'name': name,
+        'rating': float(rating),
+        'country': country
+    }
+
+    # добавляем филм в общий словарь
+    films.append(new)
+    with open('films.json', 'w') as f:
+        # записываем словарь в файл
+        json.dump(films, f, indent=2)
+
+    # формируем сообщение об успешном добавлении фильма
+    response = f'Film "{name}" successfully added'
+    context = {
+        'response': response,
+    }
+
+    # рендерим страничку с сообщением о добавлении фильма
+    return render_template('film_form.html', **context)
 
 
 # метод, который возвращает конкретный фильмо по id по относительному пути /film/<int:film_id>,

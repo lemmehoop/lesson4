@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="back" onclick="location.href = '{{ url_for("films_list") }}'">
+        <p>Все фильмы</p>
+    </div>
+    <div class="form-block">
+        <form action="" method="post">
+            <label>НАЗВАНИЕ</label><br><input type="text" name="name"><br>
+            <label>РЕЙТИНГ</label><br><input type="text" name="rating"><br>
+            <label>СТРАНА</label><br><input type="text" name="country"><br><br>
+            <button>ДОБАВИТЬ</button>
+        </form>
+    </div>
+    {% if response %}
+        <p>{{ response }}</p>
+    {% endif %}
+{% endblock %}

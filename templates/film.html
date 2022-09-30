@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
 {% block body %}
-    {# переменные из контекста используем с двойными фигурными скобками #}
-    <h1>{{ title }}</h1>
-    <div>
+    <div class="back" onclick="location.href = '{{ url_for("films_list") }}'">
+        <p>Все фильмы</p>
+    </div>
+    <div class="film">
+        {# переменные из контекста используем с двойными фигурными скобками #}
+        <h2>{{ title }}</h2>
+        <hr>
         <p>Rating: {{ film.rating }}</p>
         <p>Country: {{ film.country }}</p>
     </div>
