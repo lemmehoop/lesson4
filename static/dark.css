@@ -4,12 +4,12 @@ html {
 
 body {
     font-family: Montserrat, sans-serif;
-    background: #e3f2fd;
+    background: #263238;
     text-align: center;
 }
 
 div {
-    background-color: #263238;
+    background-color: #415660;
     width: 185px;
     padding: 2px;
     color: #e3f2fd;
@@ -34,13 +34,14 @@ div {
 }
 
 h1 {
-    color: #263238;
+    color: #415660;
 }
 
 .all_films {
     display: inline;
     float: left;
     height: 100px;
+    cursor: pointer;
 }
 
 .all_films:hover {
@@ -67,13 +68,13 @@ hr {
 label {
     text-align: left;
     font-size: 12px;
-    color: darkgray;
+    color: white;
 }
 
 .form-block input {
     margin-bottom: 10px;
-    background: #102027;
-    border: 1px solid #102027;
+    background: #415660;
+    border: 2px solid #263238;
     border-radius: 2px;
     line-height: 20px;
     color: white;
@@ -81,16 +82,16 @@ label {
 }
 
 button {
-    background: #e3f2fd;
-    color: #102027;
-    border: 2px solid #e3f2fd;
+    background: #263238;
+    color: white;
+    border: 2px solid #263238;
     border-radius: 3px;
     font-size: 13px;
     font-weight: 500;
 }
 
 button:hover {
-    outline: 2px solid #415660;
+    outline: 1px solid #263238;
 }
 
 #new {
@@ -101,10 +102,13 @@ button:hover {
     padding: 0;
     width: 90px;
     height: 14px;
+    margin: 3px;
+    cursor: pointer;
 }
 
 .back p {
     font-size: 12px;
+    margin: 0;
 }
 
 .back:hover {

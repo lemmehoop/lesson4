@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/{{ style }}.css">
 </head>
 <body>
+    <div class="back" onclick="location.href = '{{ url_for("change_mode") }}'">
+        <p>Поменять мод</p>
+    </div>
     {#
         базовый шаблон, который используют остальные шаблоны
         имеет общую структуру, чтобы не дублировать код

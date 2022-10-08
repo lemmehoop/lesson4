@@ -13,79 +13,73 @@
   },
   {
     "id": 2,
-    "name": "Russian Film 3",
-    "rating": 4.4,
-    "country": "Russia"
-  },
-  {
-    "id": 3,
     "name": "American Film 1",
     "rating": 9.1,
     "country": "USA"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "American Film 2",
     "rating": 7.9,
     "country": "USA"
   },
   {
-    "id": 5,
-    "name": "American Film 3",
-    "rating": 3.9,
-    "country": "USA"
-  },
-  {
-    "id": 6,
+    "id": 4,
     "name": "French Film 1",
     "rating": 6.7,
     "country": "France"
   },
   {
-    "id": 7,
+    "id": 5,
     "name": "French Film 2",
     "rating": 7.2,
     "country": "France"
   },
   {
-    "id": 8,
-    "name": "French Film 3",
-    "rating": 8.7,
-    "country": "France"
-  },
-  {
-    "id": 10,
+    "id": 6,
     "name": "New American Film",
     "rating": 8.8,
     "country": "USA"
   },
   {
-    "id": 11,
+    "id": 7,
     "name": "Snatch",
     "rating": 8.5,
     "country": "England"
   },
   {
-    "id": 12,
+    "id": 8,
     "name": "Thor: Love and Thunder",
     "rating": 6.1,
     "country": "USA"
   },
   {
-    "id": 16,
+    "id": 9,
     "name": "Batman: begins",
     "rating": 8.2,
     "country": "USA"
   },
   {
-    "id": 17,
+    "id": 10,
     "name": "Batman 2022",
     "rating": 7.9,
     "country": "USA"
   },
   {
-    "id": 18,
-    "name": "bkjrtbn",
+    "id": 11,
+    "name": "American psycho",
+    "rating": 7.6,
+    "country": "USA"
+  },
+  {
+    "id": 12,
+    "name": "Thor: Ragnarok",
+    "rating": 7.7,
+    "country": "USA"
+  },
+  {
+    "id": 13,
+    "name": "\u043d\u043e\u0432\u044b\u0439 \u0444\u0438\u043b\u044c\u043c",
     "rating": 7.0,
     "country": "Russia"
   }
